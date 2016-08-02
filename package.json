@@ -15,5 +15,19 @@
     "serve-favicon": "~2.3.0",
     "mongoose": "^4.5.7",
     "mongoose-schema-extend": "^0.2.2"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youssefizikitn/onlineTutor.git"
+  },
+  "author": "youssefizikitn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youssefizikitn/onlineTutor/issues"
+  },
+"homepage": "https://github.com/youssefizikitn/onlineTutor#readme"
 }
