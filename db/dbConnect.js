@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('<Enter your MongoDB connection string>');
+mongoose.connect('mongodb://youssef:abc123@localhost/myDb');
 var db = mongoose.connection;
 
 module.exports = db;

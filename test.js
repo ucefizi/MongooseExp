@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var db = require('./db/dbConnect');
 var User = require('./db/models/userModel');
+var Professor = require('./db/models/professorModel');
 
 var usr1 = new User({
 	fName: 'aabb',
@@ -17,14 +18,15 @@ db.once('open', function() {
 
 	usr1.save(function (err, usr1) {
 		if (err) return console.error(err);
-		console.log('1st professor: ' + usr1 + ' saved!');
-		mongoose.disconnect();
+		console.log('User: ' + usr1 + ' saved!');
 	});
 
-	User.find({fName: /^aabb/, lName: /^bbcc/ }, function (err, users) {
+	User.find(function (err, users) {
 		if (err) return console.error(err);
 		var usr = users;
-		var us = new User(usr[usr.length-1]);
-		console.log(us.email);
+		for (var i = 0; i < usr.length; i++) {
+			var us = new User(usr[i]);
+			console.log('User' + i + ': ' + us + '\n');
+		}
 	});
 });
