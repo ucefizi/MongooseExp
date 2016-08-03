@@ -3,8 +3,9 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 var levelSchema = new Schema({
-	title: String,
-	cycle: String
+	title: {type: String, require: 'Please enter the level title'},
+	cycle: {type: String, require: 'Please enter the cycle title'},
+	created: {type: Date, default: Date.now}
 }, {
 	collection: 'levels'
 });

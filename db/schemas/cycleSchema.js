@@ -3,7 +3,8 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
 cycleSchema = new Schema({
-	title: String,
+	title: {type: String, require: 'Please enter the cycle title'},
+	created: {type: Date, default: Date.now}
 }, {
 	collection: 'cycles'
 });

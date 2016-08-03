@@ -5,9 +5,9 @@ var mongoose = require('mongoose'),
 var userSchema = require('./userSchema');
 
 var professorSchema = userSchema.extend({
-	profession: String,
-	desc: String,
-	cycles: Array
+	profession: {type: String, require: 'Please enter your profession'},
+	desc: {type: String, required: 'Please enter a description about yourself'},
+	cycles: [{type: Schema.Types.ObjectId, ref: 'Cycle'}]
 });
 
 professorSchema.methods.addSession = function (sess) {
