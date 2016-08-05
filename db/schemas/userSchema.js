@@ -13,6 +13,32 @@ var userSchema = new Schema({
 	collection: 'users'
 });
 
+// generate a hash for the password before any save operation
+userSchema.pre('save', function(next) {
+    var user = this;
+    if (this.isModified('password') || this.isNew) {
+      bcrypt.genSalt(10, function(err, salt) {
+          if (err) {
+            return next(err);
+          }
+          bcrypt.hash(user.passWord, salt, null, function(err, hash) {
+              if (err) {
+                return next(err);
+              }
+              user.passWord = hash;
+              next();
+            });
+        });
+    } else {
+      return next();
+    }
+});
+
+// checking if password is valid
+userSchema.methods.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.passWord);
+  };
+
 userSchema.methods.logIn = function () {
 	// body...
 };
