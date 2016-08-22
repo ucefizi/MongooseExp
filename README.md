@@ -1,5 +1,5 @@
-# onlineTutor
-Une plateforme pour le soutien scolaire
+# MongooseExp
+Example of Mongoose use
 
 
 Run "npm install" to install dependencies
