@@ -22,12 +22,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/youssefizikitn/onlineTutor.git"
+    "url": "git+https://github.com/youssefizikitn/MongooseExp.git"
   },
   "author": "youssefizikitn",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/youssefizikitn/onlineTutor/issues"
+    "url": "https://github.com/youssefizikitn/MongooseExp/issues"
   },
-"homepage": "https://github.com/youssefizikitn/onlineTutor#readme"
+"homepage": "https://github.com/youssefizikitn/MongooseExp#readme"
 }
